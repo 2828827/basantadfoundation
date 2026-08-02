@@ -355,6 +355,64 @@ technology, celebrations and community programs.
 </div>
 
 </footer>
+<section id="admission">
+<h2>Admission Form</h2>
 
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Student Name" required><br><br>
+
+<input type="text" id="father" placeholder="Father/Mother Name" required><br><br>
+
+<input type="tel" id="phone" placeholder="Mobile Number" required><br><br>
+
+<select id="class" required>
+<option value="">Select Class</option>
+<option>1st</option>
+<option>2nd</option>
+<option>3rd</option>
+<option>4th</option>
+<option>5th</option>
+<option>6th</option>
+<option>7th</option>
+<option>8th</option>
+<option>9th</option>
+<option>10th</option>
+<option>11th</option>
+<option>12th</option>
+</select><br><br>
+
+<select id="course" required>
+<option value="">Select Course</option>
+<option>Computer</option>
+<option>English</option>
+<option>Maths</option>
+<option>Science</option>
+<option>Graphics Design</option>
+<option>AI Basics</option>
+</select><br><br>
+
+<textarea id="address" placeholder="Address" required></textarea><br><br>
+
+<button type="submit">Apply Now</button>
+</form>
+</section>
+  <script>
+function sendToWhatsApp() {
+let msg =
+`AD Foundation Admission Form
+
+Student Name: ${document.getElementById("name").value}
+Father/Mother Name: ${document.getElementById("father").value}
+Mobile: ${document.getElementById("phone").value}
+Class: ${document.getElementById("class").value}
+Course: ${document.getElementById("course").value}
+Address: ${document.getElementById("address").value}`;
+
+window.open(
+"https://wa.me/919217904689?text=" + encodeURIComponent(msg),
+"_blank"
+);
+}
+  </script>
 </body>
 </html>
