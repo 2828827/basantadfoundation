@@ -251,7 +251,41 @@ html{
 }
 </style>
 </head>
+<button id="voiceBtn">🎤 Talk to AD Foundation AI</button>
 
+<script>
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+recognition.lang = "en-IN";
+recognition.continuous = false;
+
+document.getElementById("voiceBtn").addEventListener("click", () => {
+    recognition.start();
+});
+
+recognition.onresult = function(event) {
+
+    let text = event.results[0][0].transcript.toLowerCase();
+    let reply = "Welcome to AD Foundation. How can I help you?";
+
+    if(text.includes("course") || text.includes("class")) {
+        reply = "We provide Mathematics, Science, English, Computer, Graphic Design and Artificial Intelligence classes.";
+    }
+    else if(text.includes("founder")) {
+        reply = "AD Foundation was founded by Mrs Rakhi Luthra.";
+    }
+    else if(text.includes("address") || text.includes("location")) {
+        reply = "AD Foundation is located at Sector 92 Block A 17 Ground Floor Noida Uttar Pradesh.";
+    }
+    else if(text.includes("contact")) {
+        reply = "Please visit our contact section for more details.";
+    }
+
+    const speech = new SpeechSynthesisUtterance(reply);
+    speech.lang = "en-IN";
+    window.speechSynthesis.speak(speech);
+};
+</script>
 <body>
 
 <header>
