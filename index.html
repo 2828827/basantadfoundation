@@ -282,8 +282,12 @@ recognition.onresult = function(event) {
     }
 
     const speech = new SpeechSynthesisUtterance(reply);
-    speech.lang = "en-IN";
-    window.speechSynthesis.speak(speech);
+speech.lang = "en-IN";
+
+let voices = window.speechSynthesis.getVoices();
+speech.voice = voices.find(v => v.name.includes("student")) || voices[0];
+
+window.speechSynthesis.speak(speech);
 };
 </script>
 <body>
