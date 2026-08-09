@@ -96,7 +96,7 @@
       text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
     }
 
-    /* 3 Line Menu Toggle Icon (Hidden on Desktop) */
+    /* 3 Line Menu Toggle Icon */
     .menu-toggle {
       display: none;
       font-size: 26px;
@@ -377,19 +377,17 @@
 
   <div id="canvas-container"></div>
 
-  <!-- Header with 3 Line Toggle Menu -->
+  <!-- Header -->
   <header>
     <a href="#" class="logo-container">
       <img src="logo.png" alt="AD Foundation Logo" class="logo-img">
       <span class="logo-text">AD <span>FOUNDATION</span></span>
     </a>
     
-    <!-- 3 Line Hamburger Icon -->
     <div class="menu-toggle" id="mobile-menu">
       <i class="fa-solid fa-bars"></i>
     </div>
 
-    <!-- Navigation Menu -->
     <nav id="nav-list">
       <a href="#home" onclick="closeMenu()">Home</a>
       <a href="#courses" onclick="closeMenu()">Courses</a>
@@ -424,7 +422,7 @@
       
       <div class="card-3d course-card">
         <div class="media-box">
-          <img src="course-math.jpg" alt="Mathematics">
+          <img src="Mathematics.png" alt="Mathematics">
         </div>
         <h3>Mathematics</h3>
         <p>Strong fundamental concepts and advanced problem-solving.</p>
@@ -432,7 +430,7 @@
 
       <div class="card-3d course-card">
         <div class="media-box">
-          <img src="course-ai.jpg" alt="Artificial Intelligence">
+          <img src="Artificial Intelligence.png" alt="Artificial Intelligence">
         </div>
         <h3>Artificial Intelligence</h3>
         <p>Future-ready AI fundamentals and practical training.</p>
@@ -440,7 +438,7 @@
 
       <div class="card-3d course-card">
         <div class="media-box">
-          <img src="course-graphics.jpg" alt="Graphics Design">
+          <img src="Graphics Design.png" alt="Graphics Design">
         </div>
         <h3>Graphics Design</h3>
         <p>Master creative tools and modern design principles.</p>
@@ -448,7 +446,7 @@
 
       <div class="card-3d course-card">
         <div class="media-box">
-          <img src="course-english.jpg" alt="English">
+          <img src="English.png" alt="English">
         </div>
         <h3>English Studies</h3>
         <p>Interactive spoken English, grammar, and vocabulary.</p>
@@ -456,7 +454,7 @@
 
       <div class="card-3d course-card">
         <div class="media-box">
-          <img src="course-science.jpg" alt="Science">
+          <img src="Science.png" alt="Science">
         </div>
         <h3>Science</h3>
         <p>Practical concepts and real-world scientific thinking.</p>
@@ -464,7 +462,7 @@
 
       <div class="card-3d course-card">
         <div class="media-box">
-          <img src="course-computer.jpg" alt="Computer Studies">
+          <img src="Computer.png" alt="Computer Studies">
         </div>
         <h3>Computer Studies</h3>
         <p>Complete computer literacy, coding, and technology.</p>
@@ -606,9 +604,8 @@
     </div>
   </footer>
 
-  <!-- JavaScript for 3-Line Menu & 3D Background -->
+  <!-- JavaScript -->
   <script>
-    // 3-Line Toggle Menu Logic
     const menuToggle = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
 
@@ -620,7 +617,6 @@
       navList.classList.remove('active');
     }
 
-    // Three.js Background Script
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.set(0, 0, 8);
