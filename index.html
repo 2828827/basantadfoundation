@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AD Foundation - Free Quality Education NGO</title>
-  
-  <!-- Google Fonts & FontAwesome Icons -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -25,7 +24,6 @@
       width: 100vw;
     }
 
-    /* 3D WebGL Background Canvas */
     #canvas-container {
       position: fixed;
       top: 0;
@@ -36,7 +34,6 @@
       pointer-events: none;
     }
 
-    /* Header & Mobile Navigation */
     header {
       position: fixed;
       top: 0;
@@ -74,9 +71,10 @@
       text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
     }
 
-    .logo-text span { color: #f59e0b; }
+    .logo-text span {
+      color: #f59e0b;
+    }
 
-    /* Desktop Nav */
     nav {
       display: flex;
       align-items: center;
@@ -96,7 +94,6 @@
       text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
     }
 
-    /* 3 Line Menu Toggle Icon */
     .menu-toggle {
       display: none;
       font-size: 26px;
@@ -104,7 +101,6 @@
       cursor: pointer;
     }
 
-    /* Sections Layout */
     section {
       padding: 110px 5% 50px;
       position: relative;
@@ -133,7 +129,6 @@
       gap: 10px;
     }
 
-    /* 3D Glass Cards */
     .card-3d {
       background: rgba(15, 23, 42, 0.65);
       backdrop-filter: blur(16px);
@@ -150,7 +145,6 @@
       box-shadow: 0 18px 40px rgba(56, 189, 248, 0.25);
     }
 
-    /* Hero Section */
     .hero-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -200,14 +194,14 @@
       object-fit: cover;
     }
 
-    /* Course & Gallery Grid */
     .responsive-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
     }
 
-    .course-card, .gallery-card {
+    .course-card,
+    .gallery-card {
       text-align: center;
     }
 
@@ -220,13 +214,15 @@
       border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
-    .media-box img, .media-box video {
+    .media-box img,
+    .media-box video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .course-card h3, .gallery-card h4 {
+    .course-card h3,
+    .gallery-card h4 {
       font-size: 18px;
       margin-bottom: 8px;
       color: #f1f5f9;
@@ -238,7 +234,6 @@
       line-height: 1.5;
     }
 
-    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -276,7 +271,75 @@
       line-height: 1.7;
     }
 
-    /* Admission Form */
+    /* ==============================
+       INSPIRED BY SECTION
+       ============================== */
+
+    .inspired-by-card {
+      margin-top: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.8),
+        rgba(2, 132, 199, 0.12)
+      );
+    }
+
+    /* Inspired Person Photo */
+    .inspired-photo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .inspired-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #f59e0b;
+      padding: 3px;
+      background: #0f172a;
+      box-shadow:
+        0 0 20px rgba(245, 158, 11, 0.35),
+        0 0 40px rgba(56, 189, 248, 0.15);
+    }
+
+    .inspired-by-card h3 {
+      color: #f59e0b;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .in-loving-memory {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .inspired-name {
+      display: inline-block;
+      min-width: 230px;
+      padding: 10px 25px;
+      margin: 8px 0 15px;
+      border: 1px dashed rgba(56, 189, 248, 0.7);
+      border-radius: 30px;
+      color: #38bdf8;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .inspired-by-card p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
     .form-container {
       max-width: 600px;
       margin: 0 auto;
@@ -294,7 +357,8 @@
       font-size: 14px;
     }
 
-    .form-group input, .form-group select {
+    .form-group input,
+    .form-group select {
       width: 100%;
       padding: 12px 16px;
       background: rgba(3, 7, 18, 0.7);
@@ -305,7 +369,6 @@
       outline: none;
     }
 
-    /* Footer */
     footer {
       background: rgba(2, 6, 23, 0.95);
       border-top: 1px solid rgba(255, 215, 0, 0.2);
@@ -341,8 +404,8 @@
       font-size: 13px;
     }
 
-    /* Mobile 3 Line Dropdown Menu Rules */
     @media (max-width: 768px) {
+
       .menu-toggle {
         display: block;
       }
@@ -368,22 +431,31 @@
         padding: 10px 0;
         font-size: 16px;
       }
+
+      .inspired-photo {
+        width: 125px;
+        height: 125px;
+      }
     }
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
 
   <div id="canvas-container"></div>
 
   <!-- Header -->
   <header>
+
     <a href="#" class="logo-container">
       <img src="logo.png" alt="AD Foundation Logo" class="logo-img">
-      <span class="logo-text">AD <span>FOUNDATION</span></span>
+      <span class="logo-text">
+        AD <span>FOUNDATION</span>
+      </span>
     </a>
-    
+
     <div class="menu-toggle" id="mobile-menu">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -396,30 +468,52 @@
       <a href="#admission" onclick="closeMenu()">Admission</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
     </nav>
+
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="home">
+
     <div class="hero-container">
+
       <div class="hero-content">
+
         <h1>AD Foundation</h1>
+
         <h2>Free Education For All</h2>
-        <p>Providing free quality education in Mathematics, Artificial Intelligence, Graphics Designing, English, Science, and Computer Studies.</p>
-        <a href="#admission" class="btn-3d"><i class="fa-solid fa-paper-plane"></i> Join Free Now</a>
+
+        <p>
+          Providing free quality education in Mathematics,
+          Artificial Intelligence, Graphics Designing, English,
+          Science, and Computer Studies.
+        </p>
+
+        <a href="#admission" class="btn-3d">
+          <i class="fa-solid fa-paper-plane"></i>
+          Join Free Now
+        </a>
+
       </div>
+
       <div class="hero-video-card card-3d">
+
         <video controls poster="logo.png">
           <source src="video.mp4" type="video/mp4">
         </video>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- Courses Section -->
+  <!-- Courses -->
   <section id="courses">
+
     <h2 class="section-title">Our Free Courses</h2>
+
     <div class="responsive-grid">
-      
+
       <div class="card-3d course-card">
         <div class="media-box">
           <img src="Mathematics.png" alt="Mathematics">
@@ -469,145 +563,328 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- About Section -->
   <section id="about">
+
     <h2 class="section-title">About AD Foundation</h2>
+
     <div class="card-3d about-grid">
+
       <div class="founder-image-box">
+
         <img src="owner.png" alt="Mrs. Rakhi Luthra">
-        <h4 style="margin-top: 10px; color: #f59e0b;">Mrs. Rakhi Luthra</h4>
-        <p style="color: #94a3b8; font-size: 12px;">Founder & Owner</p>
+
+        <h4 style="margin-top: 10px; color: #f59e0b;">
+          Mrs. Rakhi Luthra
+        </h4>
+
+        <p style="color: #94a3b8; font-size: 12px;">
+          Founder & Owner
+        </p>
+
       </div>
+
       <div class="about-text">
+
         <h3>Empowering Youth</h3>
+
         <h2>Mrs. Rakhi Luthra</h2>
-        <p>AD Foundation is a non-profit NGO dedicated to transforming lives by offering 100% free quality education, hands-on skill building, and career guidance for all deserving students.</p>
+
+        <p>
+          AD Foundation is a non-profit NGO dedicated to transforming
+          lives by offering 100% free quality education, hands-on skill
+          building, and career guidance for all deserving students.
+        </p>
+
       </div>
+
     </div>
+
+    <!-- ==============================
+         INSPIRED BY
+         ============================== -->
+
+    <div class="card-3d inspired-by-card">
+
+      <!-- YAHAN BAAD MEIN PHOTO DALO -->
+      <!-- Photo file ka naam: inspired-by.jpg -->
+
+      <div class="inspired-photo-box">
+
+        <img
+          src="inspired-by.jpg"
+          alt="Inspired By"
+          class="inspired-photo"
+        >
+
+      </div>
+
+      <h3>Inspired By</h3>
+
+      <div class="in-loving-memory">
+        In Loving Memory of
+      </div>
+
+      <!-- BAAD MEIN YAHAN NAAM DALO -->
+      <div class="inspired-name">
+        ______________________
+      </div>
+
+      <p>
+        In memory of a person whose vision, values, and inspiration
+        continue to guide our journey of making quality education
+        accessible to everyone.
+      </p>
+
+    </div>
+
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery -->
   <section id="gallery">
+
     <h2 class="section-title">Photo & Video Gallery</h2>
-    
-    <!-- 6 Photos -->
-    <h3 class="subsection-title"><i class="fa-solid fa-camera"></i> Photos (6)</h3>
+
+    <h3 class="subsection-title">
+      <i class="fa-solid fa-camera"></i>
+      Photos (6)
+    </h3>
+
     <div class="responsive-grid">
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><img src="photo1.jpg" alt="P1"></div>
+        <div class="media-box">
+          <img src="photo1.jpg" alt="P1">
+        </div>
         <h4>Community Program</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><img src="photo2.jpg" alt="P2"></div>
+        <div class="media-box">
+          <img src="photo2.jpg" alt="P2">
+        </div>
         <h4>Student Events</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><img src="photo3.jpg" alt="P3"></div>
+        <div class="media-box">
+          <img src="photo3.jpg" alt="P3">
+        </div>
         <h4>Tech Workshops</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><img src="photo4.jpg" alt="P4"></div>
+        <div class="media-box">
+          <img src="photo4.jpg" alt="P4">
+        </div>
         <h4>Classroom Sessions</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><img src="photo5.jpg" alt="P5"></div>
+        <div class="media-box">
+          <img src="photo5.jpg" alt="P5">
+        </div>
         <h4>Group Activities</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><img src="photo6.jpg" alt="P6"></div>
+        <div class="media-box">
+          <img src="photo6.jpg" alt="P6">
+        </div>
         <h4>Annual Function</h4>
       </div>
+
     </div>
 
-    <!-- 6 Videos -->
-    <h3 class="subsection-title" style="margin-top: 40px;"><i class="fa-solid fa-video"></i> Videos (6)</h3>
+    <h3 class="subsection-title" style="margin-top: 40px;">
+      <i class="fa-solid fa-video"></i>
+      Videos (6)
+    </h3>
+
     <div class="responsive-grid">
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><video controls poster="video1-thumb.jpg"><source src="video1.mp4" type="video/mp4"></video></div>
+        <div class="media-box">
+          <video controls poster="video1-thumb.jpg">
+            <source src="video1.mp4" type="video/mp4">
+          </video>
+        </div>
         <h4>AI Workshop Highlights</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><video controls poster="video2-thumb.jpg"><source src="video2.mp4" type="video/mp4"></video></div>
+        <div class="media-box">
+          <video controls poster="video2-thumb.jpg">
+            <source src="video2.mp4" type="video/mp4">
+          </video>
+        </div>
         <h4>Annual Celebration</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><video controls poster="video3-thumb.jpg"><source src="video3.mp4" type="video/mp4"></video></div>
+        <div class="media-box">
+          <video controls poster="video3-thumb.jpg">
+            <source src="video3.mp4" type="video/mp4">
+          </video>
+        </div>
         <h4>Computer Lab Practical</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><video controls poster="video4-thumb.jpg"><source src="video4.mp4" type="video/mp4"></video></div>
+        <div class="media-box">
+          <video controls poster="video4-thumb.jpg">
+            <source src="video4.mp4" type="video/mp4">
+          </video>
+        </div>
         <h4>Spoken English Class</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><video controls poster="video5-thumb.jpg"><source src="video5.mp4" type="video/mp4"></video></div>
+        <div class="media-box">
+          <video controls poster="video5-thumb.jpg">
+            <source src="video5.mp4" type="video/mp4">
+          </video>
+        </div>
         <h4>Science Project Demo</h4>
       </div>
+
       <div class="card-3d gallery-card">
-        <div class="media-box"><video controls poster="video6-thumb.jpg"><source src="video6.mp4" type="video/mp4"></video></div>
+        <div class="media-box">
+          <video controls poster="video6-thumb.jpg">
+            <source src="video6.mp4" type="video/mp4">
+          </video>
+        </div>
         <h4>Student Testimonials</h4>
       </div>
+
     </div>
+
   </section>
 
-  <!-- Admission Section -->
+  <!-- Admission -->
   <section id="admission">
+
     <h2 class="section-title">Free Admission Form</h2>
+
     <div class="card-3d form-container">
+
       <form onsubmit="event.preventDefault(); alert('Admission Form Submitted Successfully!');">
+
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Enter full name" required>
+          <input
+            type="text"
+            placeholder="Enter full name"
+            required
+          >
         </div>
+
         <div class="form-group">
+
           <label>Select Course</label>
+
           <select required>
-            <option value="">Choose Course</option>
+
+            <option value="">
+              Choose Course
+            </option>
+
             <option>Mathematics</option>
             <option>Artificial Intelligence</option>
             <option>Graphics Design</option>
             <option>English</option>
             <option>Science</option>
             <option>Computer Studies</option>
+
           </select>
+
         </div>
+
         <div class="form-group">
-          <label>Phone / WhatsApp Number</label>
-          <input type="tel" placeholder="Enter contact number" required>
+
+          <label>
+            Phone / WhatsApp Number
+          </label>
+
+          <input
+            type="tel"
+            placeholder="Enter contact number"
+            required
+          >
+
         </div>
-        <button type="submit" class="btn-3d" style="width: 100%; border: none; cursor: pointer;">Submit Registration</button>
+
+        <button
+          type="submit"
+          class="btn-3d"
+          style="width: 100%; border: none; cursor: pointer;"
+        >
+          Submit Registration
+        </button>
+
       </form>
+
     </div>
+
   </section>
 
   <!-- Footer -->
   <footer id="contact">
+
     <div class="footer-grid">
+
       <div class="footer-col">
+
         <h3>Address</h3>
-        <p><i class="fa-solid fa-location-dot" style="color: #f59e0b;"></i> Sector 92, Block A-17, Ground Floor, Uttar Pradesh</p>
+
+        <p>
+          <i
+            class="fa-solid fa-location-dot"
+            style="color: #f59e0b;"
+          ></i>
+
+          Sector 92, Block A-17, Ground Floor, Uttar Pradesh
+        </p>
+
       </div>
+
       <div class="footer-col">
+
         <h3>Courses Offered</h3>
+
         <p>Maths • AI • Graphics</p>
         <p>English • Science • Computer</p>
+
       </div>
+
       <div class="footer-col">
+
         <h3>Contact NGO</h3>
+
         <p>AD Foundation NGO</p>
         <p>Founder: Mrs. Rakhi Luthra</p>
+
       </div>
+
     </div>
+
     <div class="footer-bottom">
       © 2026 AD Foundation NGO. All Rights Reserved.
     </div>
+
   </footer>
 
   <!-- JavaScript -->
   <script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
+
+    const menuToggle =
+      document.getElementById('mobile-menu');
+
+    const navList =
+      document.getElementById('nav-list');
 
     menuToggle.addEventListener('click', () => {
       navList.classList.toggle('active');
@@ -618,50 +895,8 @@
     }
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 0, 8);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-    const blueLight = new THREE.PointLight(0x38bdf8, 2, 15);
-    blueLight.position.set(5, 5, 5);
-    scene.add(blueLight);
-
-    const goldLight = new THREE.PointLight(0xf59e0b, 2, 15);
-    goldLight.position.set(-5, -5, 5);
-    scene.add(goldLight);
-
-    const particleGeo = new THREE.BufferGeometry();
-    const particleCount = 200;
-    const posArray = new Float32Array(particleCount * 3);
-
-    for(let i = 0; i < particleCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 18;
-    }
-
-    particleGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    const particleMat = new THREE.PointsMaterial({ size: 0.04, color: 0x38bdf8, transparent: true, opacity: 0.6 });
-    const particles = new THREE.Points(particleGeo, particleMat);
-    scene.add(particles);
-
-    const clock = new THREE.Clock();
-    function animate() {
-      requestAnimationFrame(animate);
-      const time = clock.getElapsedTime();
-      particles.rotation.y = time * 0.03;
-      particles.rotation.x = time * 0.01;
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-  </script>
-</body>
-</html>
+    const camera =
+      new THREE.PerspectiveCamera(
+        45,
+        wi
