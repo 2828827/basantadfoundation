@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>AD Foundation - Free Quality Education NGO</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -21,18 +25,20 @@
       background-color: #030712;
       color: #f8fafc;
       overflow-x: hidden;
-      width: 100vw;
+      width: 100%;
     }
 
     #canvas-container {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       z-index: -1;
       pointer-events: none;
     }
+
+    /* ================= HEADER ================= */
 
     header {
       position: fixed;
@@ -42,10 +48,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       background: rgba(15, 23, 42, 0.9);
       backdrop-filter: blur(15px);
+
       border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
       z-index: 1000;
     }
 
@@ -82,7 +92,7 @@
     }
 
     nav a {
-      color: #cbd5e1;
+      color: #ffffff;
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
@@ -101,6 +111,8 @@
       cursor: pointer;
     }
 
+    /* ================= SECTIONS ================= */
+
     section {
       padding: 110px 5% 50px;
       position: relative;
@@ -111,92 +123,155 @@
 
     .section-title {
       text-align: center;
+
       font-size: clamp(28px, 4vw, 42px);
+
       font-weight: 800;
+
       margin-bottom: 40px;
-      background: linear-gradient(135deg, #ffffff, #38bdf8, #f59e0b);
+
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        #38bdf8,
+        #f59e0b
+      );
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
       text-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
 
     .subsection-title {
       font-size: clamp(20px, 2.5vw, 26px);
       color: #f59e0b;
+
       margin: 30px 0 20px;
+
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
+    /* ================= CARDS ================= */
+
     .card-3d {
       background: rgba(15, 23, 42, 0.65);
+
       backdrop-filter: blur(16px);
+
       border: 1px solid rgba(255, 215, 0, 0.15);
+
       border-radius: 20px;
+
       padding: 20px;
+
       transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
     .card-3d:hover {
       transform: translateY(-8px);
+
       border-color: rgba(56, 189, 248, 0.6);
-      box-shadow: 0 18px 40px rgba(56, 189, 248, 0.25);
+
+      box-shadow:
+        0 18px 40px rgba(56, 189, 248, 0.25);
     }
+
+    /* ================= HERO ================= */
 
     .hero-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      grid-template-columns:
+      repeat(auto-fit, minmax(300px, 1fr));
+
       gap: 40px;
+
       align-items: center;
     }
 
     .hero-content h1 {
       font-size: clamp(36px, 5vw, 56px);
+
       line-height: 1.1;
+
       margin-bottom: 10px;
+
       color: #fff;
     }
 
     .hero-content h2 {
       color: #f59e0b;
+
       font-size: clamp(20px, 3vw, 26px);
+
       margin-bottom: 15px;
+
       font-weight: 600;
     }
 
     .hero-content p {
       color: #94a3b8;
+
       font-size: 15px;
+
       margin-bottom: 25px;
+
       line-height: 1.6;
     }
 
     .btn-3d {
       display: inline-block;
+
       padding: 14px 32px;
-      background: linear-gradient(135deg, #0284c7, #f59e0b);
+
+      background:
+      linear-gradient(
+        135deg,
+        #0284c7,
+        #f59e0b
+      );
+
       color: #fff;
+
       font-weight: 700;
+
       border-radius: 40px;
+
       text-decoration: none;
-      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4);
+
+      box-shadow:
+      0 10px 25px rgba(2,132,199,0.4);
+
       transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     .hero-video-card video {
       width: 100%;
+
       aspect-ratio: 16/9;
+
       border-radius: 14px;
-      border: 1px solid rgba(56, 189, 248, 0.4);
+
+      border: 1px solid rgba(56,189,248,0.4);
+
       object-fit: cover;
     }
 
+    /* ================= GRID ================= */
+
     .responsive-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      grid-template-columns:
+      repeat(auto-fit, minmax(250px, 1fr));
+
       gap: 25px;
     }
 
@@ -207,11 +282,16 @@
 
     .media-box {
       width: 100%;
+
       aspect-ratio: 16/10;
+
       overflow: hidden;
+
       border-radius: 14px;
+
       margin-bottom: 15px;
-      border: 1px solid rgba(56, 189, 248, 0.25);
+
+      border: 1px solid rgba(56,189,248,0.25);
     }
 
     .media-box img,
@@ -224,20 +304,30 @@
     .course-card h3,
     .gallery-card h4 {
       font-size: 18px;
+
       margin-bottom: 8px;
+
       color: #f1f5f9;
     }
 
     .course-card p {
       color: #94a3b8;
+
       font-size: 13px;
+
       line-height: 1.5;
     }
 
+    /* ================= ABOUT ================= */
+
     .about-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+      grid-template-columns:
+      repeat(auto-fit, minmax(280px, 1fr));
+
       gap: 30px;
+
       align-items: center;
     }
 
@@ -247,101 +337,154 @@
 
     .founder-image-box img {
       width: 100%;
+
       max-width: 280px;
+
       aspect-ratio: 1/1;
+
       object-fit: cover;
+
       border-radius: 20px;
+
       border: 2px solid #f59e0b;
     }
 
     .about-text h3 {
       color: #f59e0b;
+
       font-size: 18px;
     }
 
     .about-text h2 {
       font-size: clamp(24px, 3.5vw, 32px);
+
       color: #38bdf8;
+
       margin: 8px 0 15px;
     }
 
     .about-text p {
       color: #cbd5e1;
+
       font-size: 15px;
+
       line-height: 1.7;
     }
 
-    /* ==============================
+    /* ==================================================
        INSPIRED BY SECTION
-       ============================== */
+       ================================================== */
 
     .inspired-by-card {
       margin-top: 30px;
+
       text-align: center;
+
       position: relative;
+
       overflow: hidden;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      background: linear-gradient(
+
+      border: 1px solid
+      rgba(245,158,11,0.35);
+
+      background:
+      linear-gradient(
         135deg,
-        rgba(15, 23, 42, 0.8),
-        rgba(2, 132, 199, 0.12)
+        rgba(15,23,42,0.8),
+        rgba(2,132,199,0.12)
       );
     }
 
-    /* Inspired Person Photo */
+    /* PHOTO BOX */
+
     .inspired-photo-box {
       display: flex;
+
       justify-content: center;
+
       align-items: center;
+
       margin-bottom: 18px;
+
+      width: 100%;
     }
 
+    /* RECTANGLE PHOTO */
+
     .inspired-photo {
-      width: 150px;
-      height: 150px;
+      width: 100%;
+
+      max-width: 350px;
+
+      height: 220px;
+
       object-fit: cover;
-      border-radius: 50%;
+
+      border-radius: 15px;
+
       border: 3px solid #f59e0b;
+
       padding: 3px;
+
       background: #0f172a;
+
       box-shadow:
-        0 0 20px rgba(245, 158, 11, 0.35),
-        0 0 40px rgba(56, 189, 248, 0.15);
+      0 0 20px rgba(245,158,11,0.35),
+      0 0 40px rgba(56,189,248,0.15);
     }
 
     .inspired-by-card h3 {
       color: #f59e0b;
+
       font-size: 24px;
+
       margin-bottom: 10px;
     }
 
     .in-loving-memory {
       color: #cbd5e1;
+
       font-size: 15px;
+
       margin-bottom: 5px;
+
       font-weight: 600;
     }
 
     .inspired-name {
       display: inline-block;
+
       min-width: 230px;
+
       padding: 10px 25px;
+
       margin: 8px 0 15px;
-      border: 1px dashed rgba(56, 189, 248, 0.7);
+
+      border: 1px dashed
+      rgba(56,189,248,0.7);
+
       border-radius: 30px;
+
       color: #38bdf8;
+
       font-size: 20px;
+
       font-weight: 700;
     }
 
     .inspired-by-card p {
       color: #94a3b8;
+
       font-size: 14px;
+
       line-height: 1.6;
     }
 
+    /* ================= FORM ================= */
+
     .form-container {
       max-width: 600px;
+
       margin: 0 auto;
     }
 
@@ -351,58 +494,94 @@
 
     .form-group label {
       display: block;
+
       margin-bottom: 6px;
+
       color: #38bdf8;
+
       font-weight: 600;
+
       font-size: 14px;
     }
 
     .form-group input,
     .form-group select {
       width: 100%;
+
       padding: 12px 16px;
-      background: rgba(3, 7, 18, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.2);
+
+      background:
+      rgba(3,7,18,0.7);
+
+      border: 1px solid
+      rgba(255,215,0,0.2);
+
       border-radius: 10px;
+
       color: #fff;
+
       font-size: 14px;
+
       outline: none;
     }
 
+    /* ================= FOOTER ================= */
+
     footer {
-      background: rgba(2, 6, 23, 0.95);
-      border-top: 1px solid rgba(255, 215, 0, 0.2);
+      background:
+      rgba(2,6,23,0.95);
+
+      border-top: 1px solid
+      rgba(255,215,0,0.2);
+
       padding: 40px 5% 20px;
+
       position: relative;
+
       z-index: 2;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+      grid-template-columns:
+      repeat(auto-fit, minmax(200px, 1fr));
+
       gap: 25px;
+
       margin-bottom: 30px;
     }
 
     .footer-col h3 {
       color: #f59e0b;
+
       margin-bottom: 12px;
+
       font-size: 18px;
     }
 
     .footer-col p {
       color: #94a3b8;
+
       font-size: 13px;
+
       margin-bottom: 6px;
     }
 
     .footer-bottom {
       text-align: center;
+
       padding-top: 15px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+      border-top: 1px solid
+      rgba(255,255,255,0.1);
+
       color: #64748b;
+
       font-size: 13px;
     }
+
+    /* ================= MOBILE ================= */
 
     @media (max-width: 768px) {
 
@@ -412,14 +591,25 @@
 
       nav {
         position: absolute;
+
         top: 100%;
+
         left: 0;
+
         width: 100%;
-        background: rgba(15, 23, 42, 0.95);
+
+        background:
+        rgba(15,23,42,0.95);
+
         backdrop-filter: blur(20px);
+
         flex-direction: column;
+
         padding: 20px 0;
-        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+
+        border-bottom: 1px solid
+        rgba(255,215,0,0.2);
+
         display: none;
       }
 
@@ -429,58 +619,102 @@
 
       nav a {
         padding: 10px 0;
+
         font-size: 16px;
       }
 
+      /* MOBILE RECTANGLE PHOTO */
+
       .inspired-photo {
-        width: 125px;
-        height: 125px;
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 190px;
+
+        border-radius: 15px;
+      }
+
+      .logo-text {
+        font-size: 16px;
+      }
+
+      .logo-img {
+        height: 42px;
       }
     }
+
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 </head>
 
 <body>
 
   <div id="canvas-container"></div>
 
-  <!-- Header -->
+  <!-- ================= HEADER ================= -->
+
   <header>
 
     <a href="#" class="logo-container">
-      <img src="logo.png" alt="AD Foundation Logo" class="logo-img">
+
+      <img
+        src="logo.png"
+        alt="AD Foundation Logo"
+        class="logo-img"
+      >
+
       <span class="logo-text">
         AD <span>FOUNDATION</span>
       </span>
+
     </a>
 
-    <div class="menu-toggle" id="mobile-menu">
+    <div
+      class="menu-toggle"
+      id="mobile-menu"
+    >
       <i class="fa-solid fa-bars"></i>
     </div>
 
     <nav id="nav-list">
+
       <a href="#home" onclick="closeMenu()">Home</a>
+
       <a href="#courses" onclick="closeMenu()">Courses</a>
+
       <a href="#about" onclick="closeMenu()">About Us</a>
+
       <a href="#gallery" onclick="closeMenu()">Gallery</a>
+
       <a href="#admission" onclick="closeMenu()">Admission</a>
+
       <a href="#contact" onclick="closeMenu()">Contact</a>
+
     </nav>
 
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
+  <!-- ================= HERO ================= -->
+
+  <section
+    class="hero"
+    id="home"
+  >
 
     <div class="hero-container">
 
       <div class="hero-content">
 
-        <h1>AD Foundation</h1>
+        <h1>
+          AD Foundation
+        </h1>
 
-        <h2>Free Education For All</h2>
+        <h2>
+          Free Education For All
+        </h2>
 
         <p>
           Providing free quality education in Mathematics,
@@ -488,17 +722,30 @@
           Science, and Computer Studies.
         </p>
 
-        <a href="#admission" class="btn-3d">
+        <a
+          href="#admission"
+          class="btn-3d"
+        >
           <i class="fa-solid fa-paper-plane"></i>
           Join Free Now
         </a>
 
       </div>
 
-      <div class="hero-video-card card-3d">
+      <div
+        class="hero-video-card card-3d"
+      >
 
-        <video controls poster="logo.png">
-          <source src="video.mp4" type="video/mp4">
+        <video
+          controls
+          poster="logo.png"
+        >
+
+          <source
+            src="video.mp4"
+            type="video/mp4"
+          >
+
         </video>
 
       </div>
@@ -507,110 +754,230 @@
 
   </section>
 
-  <!-- Courses -->
+  <!-- ================= COURSES ================= -->
+
   <section id="courses">
 
-    <h2 class="section-title">Our Free Courses</h2>
+    <h2 class="section-title">
+      Our Free Courses
+    </h2>
 
     <div class="responsive-grid">
 
       <div class="card-3d course-card">
+
         <div class="media-box">
-          <img src="Mathematics.png" alt="Mathematics">
+
+          <img
+            src="Mathematics.png"
+            alt="Mathematics"
+          >
+
         </div>
+
         <h3>Mathematics</h3>
-        <p>Strong fundamental concepts and advanced problem-solving.</p>
+
+        <p>
+          Strong fundamental concepts and
+          advanced problem-solving.
+        </p>
+
       </div>
 
-      <div class="card-3d course-card">
-        <div class="media-box">
-          <img src="Artificial Intelligence.png" alt="Artificial Intelligence">
-        </div>
-        <h3>Artificial Intelligence</h3>
-        <p>Future-ready AI fundamentals and practical training.</p>
-      </div>
 
       <div class="card-3d course-card">
+
         <div class="media-box">
-          <img src="Graphics Design.png" alt="Graphics Design">
+
+          <img
+            src="Artificial Intelligence.png"
+            alt="Artificial Intelligence"
+          >
+
         </div>
-        <h3>Graphics Design</h3>
-        <p>Master creative tools and modern design principles.</p>
+
+        <h3>
+          Artificial Intelligence
+        </h3>
+
+        <p>
+          Future-ready AI fundamentals
+          and practical training.
+        </p>
+
       </div>
 
-      <div class="card-3d course-card">
-        <div class="media-box">
-          <img src="English.png" alt="English">
-        </div>
-        <h3>English Studies</h3>
-        <p>Interactive spoken English, grammar, and vocabulary.</p>
-      </div>
 
       <div class="card-3d course-card">
+
         <div class="media-box">
-          <img src="Science.png" alt="Science">
+
+          <img
+            src="Graphics Design.png"
+            alt="Graphics Design"
+          >
+
         </div>
-        <h3>Science</h3>
-        <p>Practical concepts and real-world scientific thinking.</p>
+
+        <h3>
+          Graphics Design
+        </h3>
+
+        <p>
+          Master creative tools and
+          modern design principles.
+        </p>
+
       </div>
 
+
       <div class="card-3d course-card">
+
         <div class="media-box">
-          <img src="Computer.png" alt="Computer Studies">
+
+          <img
+            src="English.png"
+            alt="English"
+          >
+
         </div>
-        <h3>Computer Studies</h3>
-        <p>Complete computer literacy, coding, and technology.</p>
+
+        <h3>
+          English Studies
+        </h3>
+
+        <p>
+          Interactive spoken English,
+          grammar, and vocabulary.
+        </p>
+
+      </div>
+
+
+      <div class="card-3d course-card">
+
+        <div class="media-box">
+
+          <img
+            src="Science.png"
+            alt="Science"
+          >
+
+        </div>
+
+        <h3>
+          Science
+        </h3>
+
+        <p>
+          Practical concepts and
+          real-world scientific thinking.
+        </p>
+
+      </div>
+
+
+      <div class="card-3d course-card">
+
+        <div class="media-box">
+
+          <img
+            src="Computer.png"
+            alt="Computer Studies"
+          >
+
+        </div>
+
+        <h3>
+          Computer Studies
+        </h3>
+
+        <p>
+          Complete computer literacy,
+          coding, and technology.
+        </p>
+
       </div>
 
     </div>
 
   </section>
 
-  <!-- About Section -->
+  <!-- ================= ABOUT ================= -->
+
   <section id="about">
 
-    <h2 class="section-title">About AD Foundation</h2>
+    <h2 class="section-title">
+      About AD Foundation
+    </h2>
 
     <div class="card-3d about-grid">
 
       <div class="founder-image-box">
 
-        <img src="owner.png" alt="Mrs. Rakhi Luthra">
+        <img
+          src="owner.png"
+          alt="Mrs. Rakhi Luthra"
+        >
 
-        <h4 style="margin-top: 10px; color: #f59e0b;">
+        <h4
+          style="
+          margin-top:10px;
+          color:#f59e0b;
+          "
+        >
           Mrs. Rakhi Luthra
         </h4>
 
-        <p style="color: #94a3b8; font-size: 12px;">
+        <p
+          style="
+          color:#94a3b8;
+          font-size:12px;
+          "
+        >
           Founder & Owner
         </p>
 
       </div>
 
+
       <div class="about-text">
 
-        <h3>Empowering Youth</h3>
+        <h3>
+          Empowering Youth
+        </h3>
 
-        <h2>Mrs. Rakhi Luthra</h2>
+        <h2>
+          Mrs. Rakhi Luthra
+        </h2>
 
         <p>
-          AD Foundation is a non-profit NGO dedicated to transforming
-          lives by offering 100% free quality education, hands-on skill
-          building, and career guidance for all deserving students.
+          AD Foundation is a non-profit NGO
+          dedicated to transforming lives by
+          offering 100% free quality education,
+          hands-on skill building, and career
+          guidance for all deserving students.
         </p>
 
       </div>
 
     </div>
 
-    <!-- ==============================
-         INSPIRED BY
-         ============================== -->
 
-    <div class="card-3d inspired-by-card">
+    <!-- ================= INSPIRED BY ================= -->
 
-      <!-- YAHAN BAAD MEIN PHOTO DALO -->
-      <!-- Photo file ka naam: inspired-by.jpg -->
+    <div
+      class="card-3d inspired-by-card"
+    >
+
+      <!--
+        IMPORTANT:
+        Photo ka naam:
+        inspired-by.jpg
+
+        Photo ko GitHub me
+        index.html ke same folder me rakhein.
+      -->
 
       <div class="inspired-photo-box">
 
@@ -622,281 +989,287 @@
 
       </div>
 
-      <h3>Inspired By</h3>
+
+      <h3>
+        Inspired By
+      </h3>
+
 
       <div class="in-loving-memory">
+
         In Loving Memory of
+
       </div>
 
-      <!-- BAAD MEIN YAHAN NAAM DALO -->
+
       <div class="inspired-name">
+
         ______________________
+
       </div>
+
 
       <p>
-        In memory of a person whose vision, values, and inspiration
-        continue to guide our journey of making quality education
-        accessible to everyone.
+
+        In memory of a person whose vision,
+        values, and inspiration continue to
+        guide our journey of making quality
+        education accessible to everyone.
+
       </p>
 
     </div>
 
   </section>
 
-  <!-- Gallery -->
+  <!-- ================= GALLERY ================= -->
+
   <section id="gallery">
 
-    <h2 class="section-title">Photo & Video Gallery</h2>
+    <h2 class="section-title">
+      Photo & Video Gallery
+    </h2>
+
 
     <h3 class="subsection-title">
+
       <i class="fa-solid fa-camera"></i>
+
       Photos (6)
+
     </h3>
+
 
     <div class="responsive-grid">
 
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <img src="photo1.jpg" alt="P1">
-        </div>
-        <h4>Community Program</h4>
-      </div>
 
       <div class="card-3d gallery-card">
+
         <div class="media-box">
-          <img src="photo2.jpg" alt="P2">
+
+          <img
+            src="photo1.jpg"
+            alt="Community Program"
+          >
+
         </div>
-        <h4>Student Events</h4>
+
+        <h4>
+          Community Program
+        </h4>
+
       </div>
 
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <img src="photo3.jpg" alt="P3">
-        </div>
-        <h4>Tech Workshops</h4>
-      </div>
 
       <div class="card-3d gallery-card">
+
         <div class="media-box">
-          <img src="photo4.jpg" alt="P4">
+
+          <img
+            src="photo2.jpg"
+            alt="Student Events"
+          >
+
         </div>
-        <h4>Classroom Sessions</h4>
+
+        <h4>
+          Student Events
+        </h4>
+
       </div>
 
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <img src="photo5.jpg" alt="P5">
-        </div>
-        <h4>Group Activities</h4>
-      </div>
 
       <div class="card-3d gallery-card">
+
         <div class="media-box">
-          <img src="photo6.jpg" alt="P6">
+
+          <img
+            src="photo3.jpg"
+            alt="Tech Workshops"
+          >
+
         </div>
-        <h4>Annual Function</h4>
+
+        <h4>
+          Tech Workshops
+        </h4>
+
+      </div>
+
+
+      <div class="card-3d gallery-card">
+
+        <div class="media-box">
+
+          <img
+            src="photo4.jpg"
+            alt="Classroom Sessions"
+          >
+
+        </div>
+
+        <h4>
+          Classroom Sessions
+        </h4>
+
+      </div>
+
+
+      <div class="card-3d gallery-card">
+
+        <div class="media-box">
+
+          <img
+            src="photo5.jpg"
+            alt="Group Activities"
+          >
+
+        </div>
+
+        <h4>
+          Group Activities
+        </h4>
+
+      </div>
+
+
+      <div class="card-3d gallery-card">
+
+        <div class="media-box">
+
+          <img
+            src="photo6.jpg"
+            alt="Annual Function"
+          >
+
+        </div>
+
+        <h4>
+          Annual Function
+        </h4>
+
       </div>
 
     </div>
 
-    <h3 class="subsection-title" style="margin-top: 40px;">
+
+    <h3
+      class="subsection-title"
+      style="margin-top:40px;"
+    >
+
       <i class="fa-solid fa-video"></i>
+
       Videos (6)
+
     </h3>
+
 
     <div class="responsive-grid">
 
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <video controls poster="video1-thumb.jpg">
-            <source src="video1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h4>AI Workshop Highlights</h4>
-      </div>
 
       <div class="card-3d gallery-card">
+
         <div class="media-box">
-          <video controls poster="video2-thumb.jpg">
-            <source src="video2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h4>Annual Celebration</h4>
-      </div>
 
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <video controls poster="video3-thumb.jpg">
-            <source src="video3.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h4>Computer Lab Practical</h4>
-      </div>
-
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <video controls poster="video4-thumb.jpg">
-            <source src="video4.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h4>Spoken English Class</h4>
-      </div>
-
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <video controls poster="video5-thumb.jpg">
-            <source src="video5.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h4>Science Project Demo</h4>
-      </div>
-
-      <div class="card-3d gallery-card">
-        <div class="media-box">
-          <video controls poster="video6-thumb.jpg">
-            <source src="video6.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h4>Student Testimonials</h4>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Admission -->
-  <section id="admission">
-
-    <h2 class="section-title">Free Admission Form</h2>
-
-    <div class="card-3d form-container">
-
-      <form onsubmit="event.preventDefault(); alert('Admission Form Submitted Successfully!');">
-
-        <div class="form-group">
-          <label>Full Name</label>
-          <input
-            type="text"
-            placeholder="Enter full name"
-            required
-          >
-        </div>
-
-        <div class="form-group">
-
-          <label>Select Course</label>
-
-          <select required>
-
-            <option value="">
-              Choose Course
-            </option>
-
-            <option>Mathematics</option>
-            <option>Artificial Intelligence</option>
-            <option>Graphics Design</option>
-            <option>English</option>
-            <option>Science</option>
-            <option>Computer Studies</option>
-
-          </select>
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-            Phone / WhatsApp Number
-          </label>
-
-          <input
-            type="tel"
-            placeholder="Enter contact number"
-            required
+          <video
+            controls
+            poster="video1-thumb.jpg"
           >
 
+            <source
+              src="video1.mp4"
+              type="video/mp4"
+            >
+
+          </video>
+
         </div>
 
-        <button
-          type="submit"
-          class="btn-3d"
-          style="width: 100%; border: none; cursor: pointer;"
-        >
-          Submit Registration
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-
-    <div class="footer-grid">
-
-      <div class="footer-col">
-
-        <h3>Address</h3>
-
-        <p>
-          <i
-            class="fa-solid fa-location-dot"
-            style="color: #f59e0b;"
-          ></i>
-
-          Sector 92, Block A-17, Ground Floor, Uttar Pradesh
-        </p>
+        <h4>
+          AI Workshop Highlights
+        </h4>
 
       </div>
 
-      <div class="footer-col">
 
-        <h3>Courses Offered</h3>
+      <div class="card-3d gallery-card">
 
-        <p>Maths • AI • Graphics</p>
-        <p>English • Science • Computer</p>
+        <div class="media-box">
+
+          <video
+            controls
+            poster="video2-thumb.jpg"
+          >
+
+            <source
+              src="video2.mp4"
+              type="video/mp4"
+            >
+
+          </video>
+
+        </div>
+
+        <h4>
+          Annual Celebration
+        </h4>
 
       </div>
 
-      <div class="footer-col">
 
-        <h3>Contact NGO</h3>
+      <div class="card-3d gallery-card">
 
-        <p>AD Foundation NGO</p>
-        <p>Founder: Mrs. Rakhi Luthra</p>
+        <div class="media-box">
+
+          <video
+            controls
+            poster="video3-thumb.jpg"
+          >
+
+            <source
+              src="video3.mp4"
+              type="video/mp4"
+            >
+
+          </video>
+
+        </div>
+
+        <h4>
+          Computer Lab Practical
+        </h4>
 
       </div>
 
-    </div>
 
-    <div class="footer-bottom">
-      © 2026 AD Foundation NGO. All Rights Reserved.
-    </div>
+      <div class="card-3d gallery-card">
 
-  </footer>
+        <div class="media-box">
 
-  <!-- JavaScript -->
-  <script>
+          <video
+            controls
+            poster="video4-thumb.jpg"
+          >
 
-    const menuToggle =
-      document.getElementById('mobile-menu');
+            <source
+              src="video4.mp4"
+              type="video/mp4"
+            >
 
-    const navList =
-      document.getElementById('nav-list');
+          </video>
 
-    menuToggle.addEventListener('click', () => {
-      navList.classList.toggle('active');
-    });
+        </div>
 
-    function closeMenu() {
-      navList.classList.remove('active');
-    }
+        <h4>
+          Spoken English Class
+        </h4>
 
-    const scene = new THREE.Scene();
+      </div>
 
-    const camera =
-      new THREE.PerspectiveCamera(
-        45,
-        wi
+
+      <div class="card-3d gallery-card">
+
+        <div class="media-box">
+
+     
