@@ -91,7 +91,6 @@
       display: flex;
       align-items: center;
       gap: 12px;
-
       text-decoration: none;
     }
 
@@ -460,6 +459,8 @@
     }
 
 
+    /* ================= FIRST PHOTO ================= */
+
     .founder-image-box img {
       width: 100%;
 
@@ -467,12 +468,18 @@
 
       aspect-ratio: 1 / 1;
 
+      height: auto;
+
       object-fit: cover;
 
       border-radius: 20px;
 
       border:
         2px solid #f59e0b;
+
+      display: block;
+
+      margin: 0 auto;
     }
 
 
@@ -543,23 +550,26 @@
     }
 
 
-    /* ================= INSPIRED PHOTO ================= */
+    /* ==================================================
+       SECOND PHOTO
+       SAME SIZE AS FIRST PHOTO
+       ================================================== */
 
     .inspired-photo {
       width: 100%;
 
-      max-width: 350px;
+      max-width: 280px;
 
-      height: 220px;
+      aspect-ratio: 1 / 1;
+
+      height: auto;
 
       object-fit: cover;
 
-      border-radius: 15px;
+      border-radius: 20px;
 
       border:
-        3px solid #f59e0b;
-
-      padding: 3px;
+        2px solid #f59e0b;
 
       background: #0f172a;
 
@@ -571,6 +581,8 @@
         rgba(56, 189, 248, 0.15);
 
       display: block;
+
+      margin: 0 auto;
     }
 
 
@@ -812,14 +824,21 @@
       }
 
 
+      /* SECOND PHOTO MOBILE
+         SAME AS FIRST PHOTO */
+
       .inspired-photo {
         width: 100%;
 
-        max-width: 300px;
+        max-width: 280px;
 
-        height: 190px;
+        aspect-ratio: 1 / 1;
 
-        border-radius: 15px;
+        height: auto;
+
+        object-fit: cover;
+
+        border-radius: 20px;
       }
 
 
@@ -871,10 +890,21 @@
       }
 
 
-      .inspired-photo {
-        max-width: 100%;
+      /* SECOND PHOTO
+         SAME SIZE/PROPORTION AS FIRST PHOTO */
 
-        height: 180px;
+      .inspired-photo {
+        width: 100%;
+
+        max-width: 280px;
+
+        aspect-ratio: 1 / 1;
+
+        height: auto;
+
+        object-fit: cover;
+
+        border-radius: 20px;
       }
 
 
@@ -1288,11 +1318,6 @@
 
       <div class="inspired-photo-box">
 
-        <!-- IMPORTANT:
-             Photo ka exact naam:
-             inspired-by.png
-        -->
-
         <img
           src="inspired-by.png"
           alt="Inspired By"
@@ -1381,829 +1406,4 @@
 
           <img
             src="photo2.jpg"
-            alt="Student Events"
-          >
-
-        </div>
-
-        <h4>
-          Student Events
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <img
-            src="photo3.jpg"
-            alt="Tech Workshops"
-          >
-
-        </div>
-
-        <h4>
-          Tech Workshops
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <img
-            src="photo4.jpg"
-            alt="Classroom Sessions"
-          >
-
-        </div>
-
-        <h4>
-          Classroom Sessions
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <img
-            src="photo5.jpg"
-            alt="Group Activities"
-          >
-
-        </div>
-
-        <h4>
-          Group Activities
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <img
-            src="photo6.jpg"
-            alt="Annual Function"
-          >
-
-        </div>
-
-        <h4>
-          Annual Function
-        </h4>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- ================= VIDEOS ================= -->
-
-    <h3
-      class="subsection-title"
-      style="margin-top:40px;"
-    >
-
-      <i class="fa-solid fa-video"></i>
-
-      Videos (6)
-
-    </h3>
-
-
-    <div class="responsive-grid">
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <video
-            controls
-            poster="video1-thumb.jpg"
-          >
-
-            <source
-              src="video1.mp4"
-              type="video/mp4"
-            >
-
-          </video>
-
-        </div>
-
-        <h4>
-          AI Workshop Highlights
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <video
-            controls
-            poster="video2-thumb.jpg"
-          >
-
-            <source
-              src="video2.mp4"
-              type="video/mp4"
-            >
-
-          </video>
-
-        </div>
-
-        <h4>
-          Annual Celebration
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <video
-            controls
-            poster="video3-thumb.jpg"
-          >
-
-            <source
-              src="video3.mp4"
-              type="video/mp4"
-            >
-
-          </video>
-
-        </div>
-
-        <h4>
-          Computer Lab Practical
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <video
-            controls
-            poster="video4-thumb.jpg"
-          >
-
-            <source
-              src="video4.mp4"
-              type="video/mp4"
-            >
-
-          </video>
-
-        </div>
-
-        <h4>
-          Spoken English Class
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <video
-            controls
-            poster="video5-thumb.jpg"
-          >
-
-            <source
-              src="video5.mp4"
-              type="video/mp4"
-            >
-
-          </video>
-
-        </div>
-
-        <h4>
-          Science Activity
-        </h4>
-
-      </div>
-
-
-      <div class="card-3d gallery-card">
-
-        <div class="media-box">
-
-          <video
-            controls
-            poster="video6-thumb.jpg"
-          >
-
-            <source
-              src="video6.mp4"
-              type="video/mp4"
-            >
-
-          </video>
-
-        </div>
-
-        <h4>
-          Student Learning
-        </h4>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= ADMISSION ================= -->
-
-  <section id="admission">
-
-    <h2 class="section-title">
-      Free Admission
-    </h2>
-
-
-    <div class="card-3d form-container">
-
-
-      <form
-        id="admissionForm"
-      >
-
-
-        <div class="form-group">
-
-          <label for="name">
-            Full Name
-          </label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="course">
-            Select Course
-          </label>
-
-          <select
-            id="course"
-            name="course"
-            required
-          >
-
-            <option value="">
-              Select a course
-            </option>
-
-            <option value="Mathematics">
-              Mathematics
-            </option>
-
-            <option value="Artificial Intelligence">
-              Artificial Intelligence
-            </option>
-
-            <option value="Graphics Design">
-              Graphics Design
-            </option>
-
-            <option value="English">
-              English
-            </option>
-
-            <option value="Science">
-              Science
-            </option>
-
-            <option value="Computer Studies">
-              Computer Studies
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="phone">
-            Phone / WhatsApp Number
-          </label>
-
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter phone number"
-            required
-          >
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="btn-3d submit-btn"
-        >
-
-          <i class="fa-solid fa-paper-plane"></i>
-
-          Submit Registration
-
-        </button>
-
-
-      </form>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= CONTACT ================= -->
-
-  <section id="contact">
-
-    <h2 class="section-title">
-      Contact AD Foundation
-    </h2>
-
-
-    <div class="responsive-grid">
-
-
-      <div class="card-3d">
-
-        <h3
-          style="
-            color:#f59e0b;
-            margin-bottom:10px;
-          "
-        >
-
-          <i class="fa-solid fa-location-dot"></i>
-
-          Address
-
-        </h3>
-
-
-        <p
-          style="
-            color:#94a3b8;
-            line-height:1.7;
-          "
-        >
-
-          Sector 92, Block A-17,
-          Ground Floor,
-          Uttar Pradesh
-
-        </p>
-
-      </div>
-
-
-      <div class="card-3d">
-
-        <h3
-          style="
-            color:#f59e0b;
-            margin-bottom:10px;
-          "
-        >
-
-          <i class="fa-solid fa-book"></i>
-
-          Courses Offered
-
-        </h3>
-
-
-        <p
-          style="
-            color:#94a3b8;
-            line-height:1.8;
-          "
-        >
-
-          Maths • AI • Graphics<br>
-
-          English • Science • Computer
-
-        </p>
-
-      </div>
-
-
-      <div class="card-3d">
-
-        <h3
-          style="
-            color:#f59e0b;
-            margin-bottom:10px;
-          "
-        >
-
-          <i class="fa-solid fa-user"></i>
-
-          Contact NGO
-
-        </h3>
-
-
-        <p
-          style="
-            color:#94a3b8;
-            line-height:1.7;
-          "
-        >
-
-          AD Foundation NGO<br>
-
-          Founder: Mrs. Rakhi Luthra
-
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-
-    <div class="footer-grid">
-
-
-      <div class="footer-col">
-
-        <h3>
-          AD Foundation
-        </h3>
-
-        <p>
-          Free Education For All
-        </p>
-
-        <p>
-          Providing free quality education
-          and skill development.
-        </p>
-
-      </div>
-
-
-      <div class="footer-col">
-
-        <h3>
-          Courses
-        </h3>
-
-        <p>
-          Mathematics
-        </p>
-
-        <p>
-          Artificial Intelligence
-        </p>
-
-        <p>
-          Graphics Design
-        </p>
-
-        <p>
-          English
-        </p>
-
-        <p>
-          Science
-        </p>
-
-        <p>
-          Computer Studies
-        </p>
-
-      </div>
-
-
-      <div class="footer-col">
-
-        <h3>
-          Contact
-        </h3>
-
-        <p>
-          Sector 92, Block A-17
-        </p>
-
-        <p>
-          Ground Floor,
-          Uttar Pradesh
-        </p>
-
-        <p>
-          Founder:
-          Mrs. Rakhi Luthra
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-      © 2026 AD Foundation NGO.
-      All Rights Reserved.
-
-    </div>
-
-
-  </footer>
-
-
-  <!-- ================= JAVASCRIPT ================= -->
-
-  <script>
-
-    /* ================= MOBILE MENU ================= */
-
-    const mobileMenu =
-      document.getElementById("mobile-menu");
-
-    const navList =
-      document.getElementById("nav-list");
-
-
-    mobileMenu.addEventListener(
-      "click",
-      function () {
-
-        navList.classList.toggle("active");
-
-      }
-    );
-
-
-    function closeMenu() {
-
-      navList.classList.remove("active");
-
-    }
-
-
-    /* ================= ADMISSION FORM ================= */
-
-    const admissionForm =
-      document.getElementById("admissionForm");
-
-
-    admissionForm.addEventListener(
-      "submit",
-      function (event) {
-
-        event.preventDefault();
-
-
-        const name =
-          document.getElementById("name").value;
-
-        const course =
-          document.getElementById("course").value;
-
-        const phone =
-          document.getElementById("phone").value;
-
-
-        if (!name || !course || !phone) {
-
-          alert(
-            "Please fill all the details."
-          );
-
-          return;
-
-        }
-
-
-        alert(
-          "Thank you " +
-          name +
-          "! Your registration for " +
-          course +
-          " has been submitted."
-        );
-
-
-        admissionForm.reset();
-
-      }
-    );
-
-
-    /* ================= THREE.JS BACKGROUND ================= */
-
-    const container =
-      document.getElementById(
-        "canvas-container"
-      );
-
-
-    if (typeof THREE !== "undefined") {
-
-      const scene =
-        new THREE.Scene();
-
-
-      const camera =
-        new THREE.PerspectiveCamera(
-          75,
-          window.innerWidth /
-          window.innerHeight,
-          0.1,
-          1000
-        );
-
-
-      const renderer =
-        new THREE.WebGLRenderer({
-          alpha: true,
-          antialias: true
-        });
-
-
-      renderer.setSize(
-        window.innerWidth,
-        window.innerHeight
-      );
-
-
-      renderer.setPixelRatio(
-        Math.min(
-          window.devicePixelRatio,
-          2
-        )
-      );
-
-
-      container.appendChild(
-        renderer.domElement
-      );
-
-
-      camera.position.z = 5;
-
-
-      const geometry =
-        new THREE.BufferGeometry();
-
-
-      const particles = 900;
-
-
-      const positions =
-        new Float32Array(
-          particles * 3
-        );
-
-
-      for (
-        let i = 0;
-        i < particles * 3;
-        i++
-      ) {
-
-        positions[i] =
-          (Math.random() - 0.5) * 15;
-
-      }
-
-
-      geometry.setAttribute(
-        "position",
-        new THREE.BufferAttribute(
-          positions,
-          3
-        )
-      );
-
-
-      const material =
-        new THREE.PointsMaterial({
-
-          color: 0x38bdf8,
-
-          size: 0.025,
-
-          transparent: true,
-
-          opacity: 0.7
-
-        });
-
-
-      const points =
-        new THREE.Points(
-          geometry,
-          material
-        );
-
-
-      scene.add(points);
-
-
-      function animate() {
-
-        requestAnimationFrame(
-          animate
-        );
-
-
-        points.rotation.y +=
-          0.0005;
-
-        points.rotation.x +=
-          0.0002;
-
-
-        renderer.render(
-          scene,
-          camera
-        );
-
-      }
-
-
-      animate();
-
-
-      window.addEventListener(
-        "resize",
-        function () {
-
-          camera.aspect =
-            window.innerWidth /
-            window.innerHeight;
-
-          camera.updateProjectionMatrix();
-
-
-          renderer.setSize(
-            window.innerWidth,
-            window.innerHeight
-          );
-
-        }
-      );
-
-    }
-
-  </script>
-
-
-</body>
-
-</html>
+            alt="Stu
