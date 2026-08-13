@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AD Foundation - Free Quality Education NGO</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>
+    AD Foundation - Free Quality Education NGO
+  </title>
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <style>
+
+    /* ================= RESET ================= */
 
     * {
       margin: 0;
@@ -28,6 +45,9 @@
       width: 100%;
     }
 
+
+    /* ================= BACKGROUND ================= */
+
     #canvas-container {
       position: fixed;
       top: 0;
@@ -38,52 +58,72 @@
       pointer-events: none;
     }
 
+
     /* ================= HEADER ================= */
 
     header {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
+
       padding: 15px 5%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       background: rgba(15, 23, 42, 0.9);
+
       backdrop-filter: blur(15px);
 
-      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      border-bottom:
+        1px solid rgba(255, 215, 0, 0.2);
 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5);
 
       z-index: 1000;
     }
+
 
     .logo-container {
       display: flex;
       align-items: center;
       gap: 12px;
+
       text-decoration: none;
     }
+
 
     .logo-img {
       height: 48px;
       width: auto;
+
       object-fit: contain;
+
       border-radius: 8px;
-      border: 1px solid rgba(245, 158, 11, 0.4);
+
+      border:
+        1px solid rgba(245, 158, 11, 0.4);
     }
+
 
     .logo-text {
       font-size: 20px;
       font-weight: 800;
+
       color: #38bdf8;
-      text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+
+      text-shadow:
+        0 0 15px rgba(56, 189, 248, 0.5);
     }
+
 
     .logo-text span {
       color: #f59e0b;
     }
+
 
     nav {
       display: flex;
@@ -91,95 +131,131 @@
       gap: 24px;
     }
 
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
+
+    nav a,
+    nav a:link,
+    nav a:visited {
+      color: #ffffff !important;
+      text-decoration: none !important;
+
       font-size: 15px;
       font-weight: 600;
+
       transition: 0.3s;
     }
 
+
     nav a:hover {
-      color: #f59e0b;
-      text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+      color: #f59e0b !important;
+
+      text-shadow:
+        0 0 12px rgba(245, 158, 11, 0.6);
     }
+
 
     .menu-toggle {
       display: none;
+
       font-size: 26px;
+
       color: #f59e0b;
+
       cursor: pointer;
     }
+
 
     /* ================= SECTIONS ================= */
 
     section {
       padding: 110px 5% 50px;
+
       position: relative;
+
       z-index: 2;
+
       max-width: 1400px;
+
       margin: 0 auto;
     }
+
 
     .section-title {
       text-align: center;
 
-      font-size: clamp(28px, 4vw, 42px);
+      font-size:
+        clamp(28px, 4vw, 42px);
 
       font-weight: 800;
 
       margin-bottom: 40px;
 
-      background: linear-gradient(
-        135deg,
-        #ffffff,
-        #38bdf8,
-        #f59e0b
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #38bdf8,
+          #f59e0b
+        );
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      text-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.5);
     }
 
+
     .subsection-title {
-      font-size: clamp(20px, 2.5vw, 26px);
+      font-size:
+        clamp(20px, 2.5vw, 26px);
+
       color: #f59e0b;
 
       margin: 30px 0 20px;
 
       display: flex;
+
       align-items: center;
+
       gap: 10px;
     }
+
 
     /* ================= CARDS ================= */
 
     .card-3d {
-      background: rgba(15, 23, 42, 0.65);
+      background:
+        rgba(15, 23, 42, 0.65);
 
       backdrop-filter: blur(16px);
 
-      border: 1px solid rgba(255, 215, 0, 0.15);
+      border:
+        1px solid rgba(255, 215, 0, 0.15);
 
       border-radius: 20px;
 
       padding: 20px;
 
-      transition: all 0.3s ease;
-
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    .card-3d:hover {
-      transform: translateY(-8px);
-
-      border-color: rgba(56, 189, 248, 0.6);
+      transition:
+        all 0.3s ease;
 
       box-shadow:
-        0 18px 40px rgba(56, 189, 248, 0.25);
+        0 10px 25px rgba(0, 0, 0, 0.5);
     }
+
+
+    .card-3d:hover {
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(56, 189, 248, 0.6);
+
+      box-shadow:
+        0 18px 40px
+        rgba(56, 189, 248, 0.25);
+    }
+
 
     /* ================= HERO ================= */
 
@@ -187,15 +263,20 @@
       display: grid;
 
       grid-template-columns:
-      repeat(auto-fit, minmax(300px, 1fr));
+        repeat(
+          auto-fit,
+          minmax(300px, 1fr)
+        );
 
       gap: 40px;
 
       align-items: center;
     }
 
+
     .hero-content h1 {
-      font-size: clamp(36px, 5vw, 56px);
+      font-size:
+        clamp(36px, 5vw, 56px);
 
       line-height: 1.1;
 
@@ -204,15 +285,18 @@
       color: #fff;
     }
 
+
     .hero-content h2 {
       color: #f59e0b;
 
-      font-size: clamp(20px, 3vw, 26px);
+      font-size:
+        clamp(20px, 3vw, 26px);
 
       margin-bottom: 15px;
 
       font-weight: 600;
     }
+
 
     .hero-content p {
       color: #94a3b8;
@@ -224,17 +308,18 @@
       line-height: 1.6;
     }
 
+
     .btn-3d {
       display: inline-block;
 
       padding: 14px 32px;
 
       background:
-      linear-gradient(
-        135deg,
-        #0284c7,
-        #f59e0b
-      );
+        linear-gradient(
+          135deg,
+          #0284c7,
+          #f59e0b
+        );
 
       color: #fff;
 
@@ -245,24 +330,44 @@
       text-decoration: none;
 
       box-shadow:
-      0 10px 25px rgba(2,132,199,0.4);
+        0 10px 25px
+        rgba(2, 132, 199, 0.4);
 
-      transition: all 0.3s ease;
+      transition:
+        all 0.3s ease;
 
-      border: 1px solid rgba(255,255,255,0.2);
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
     }
+
+
+    .btn-3d:hover {
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 15px 35px
+        rgba(245, 158, 11, 0.35);
+    }
+
 
     .hero-video-card video {
       width: 100%;
 
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
 
       border-radius: 14px;
 
-      border: 1px solid rgba(56,189,248,0.4);
+      border:
+        1px solid
+        rgba(56, 189, 248, 0.4);
 
       object-fit: cover;
+
+      display: block;
     }
+
 
     /* ================= GRID ================= */
 
@@ -270,20 +375,25 @@
       display: grid;
 
       grid-template-columns:
-      repeat(auto-fit, minmax(250px, 1fr));
+        repeat(
+          auto-fit,
+          minmax(250px, 1fr)
+        );
 
       gap: 25px;
     }
+
 
     .course-card,
     .gallery-card {
       text-align: center;
     }
 
+
     .media-box {
       width: 100%;
 
-      aspect-ratio: 16/10;
+      aspect-ratio: 16 / 10;
 
       overflow: hidden;
 
@@ -291,15 +401,23 @@
 
       margin-bottom: 15px;
 
-      border: 1px solid rgba(56,189,248,0.25);
+      border:
+        1px solid
+        rgba(56, 189, 248, 0.25);
     }
+
 
     .media-box img,
     .media-box video {
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
+
+      display: block;
     }
+
 
     .course-card h3,
     .gallery-card h4 {
@@ -310,6 +428,7 @@
       color: #f1f5f9;
     }
 
+
     .course-card p {
       color: #94a3b8;
 
@@ -318,36 +437,44 @@
       line-height: 1.5;
     }
 
+
     /* ================= ABOUT ================= */
 
     .about-grid {
       display: grid;
 
       grid-template-columns:
-      repeat(auto-fit, minmax(280px, 1fr));
+        repeat(
+          auto-fit,
+          minmax(280px, 1fr)
+        );
 
       gap: 30px;
 
       align-items: center;
     }
 
+
     .founder-image-box {
       text-align: center;
     }
+
 
     .founder-image-box img {
       width: 100%;
 
       max-width: 280px;
 
-      aspect-ratio: 1/1;
+      aspect-ratio: 1 / 1;
 
       object-fit: cover;
 
       border-radius: 20px;
 
-      border: 2px solid #f59e0b;
+      border:
+        2px solid #f59e0b;
     }
+
 
     .about-text h3 {
       color: #f59e0b;
@@ -355,13 +482,16 @@
       font-size: 18px;
     }
 
+
     .about-text h2 {
-      font-size: clamp(24px, 3.5vw, 32px);
+      font-size:
+        clamp(24px, 3.5vw, 32px);
 
       color: #38bdf8;
 
       margin: 8px 0 15px;
     }
+
 
     .about-text p {
       color: #cbd5e1;
@@ -371,8 +501,9 @@
       line-height: 1.7;
     }
 
+
     /* ==================================================
-       INSPIRED BY SECTION
+       INSPIRED BY
        ================================================== */
 
     .inspired-by-card {
@@ -384,18 +515,20 @@
 
       overflow: hidden;
 
-      border: 1px solid
-      rgba(245,158,11,0.35);
+      border:
+        1px solid
+        rgba(245, 158, 11, 0.35);
 
       background:
-      linear-gradient(
-        135deg,
-        rgba(15,23,42,0.8),
-        rgba(2,132,199,0.12)
-      );
+        linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.8),
+          rgba(2, 132, 199, 0.12)
+        );
+
+      padding: 30px 20px;
     }
 
-    /* PHOTO BOX */
 
     .inspired-photo-box {
       display: flex;
@@ -409,10 +542,10 @@
       width: 100%;
     }
 
-    /* RECTANGLE PHOTO */
+
+    /* ================= INSPIRED PHOTO ================= */
 
     .inspired-photo {
-     
       width: 100%;
 
       max-width: 350px;
@@ -423,16 +556,23 @@
 
       border-radius: 15px;
 
-      border: 3px solid #f59e0b;
+      border:
+        3px solid #f59e0b;
 
       padding: 3px;
 
       background: #0f172a;
 
       box-shadow:
-      0 0 20px rgba(245,158,11,0.35),
-      0 0 40px rgba(56,189,248,0.15);
+        0 0 20px
+        rgba(245, 158, 11, 0.35),
+
+        0 0 40px
+        rgba(56, 189, 248, 0.15);
+
+      display: block;
     }
+
 
     .inspired-by-card h3 {
       color: #f59e0b;
@@ -441,6 +581,7 @@
 
       margin-bottom: 10px;
     }
+
 
     .in-loving-memory {
       color: #cbd5e1;
@@ -452,6 +593,7 @@
       font-weight: 600;
     }
 
+
     .inspired-name {
       display: inline-block;
 
@@ -461,8 +603,9 @@
 
       margin: 8px 0 15px;
 
-      border: 1px dashed
-      rgba(56,189,248,0.7);
+      border:
+        1px dashed
+        rgba(56, 189, 248, 0.7);
 
       border-radius: 30px;
 
@@ -473,6 +616,7 @@
       font-weight: 700;
     }
 
+
     .inspired-by-card p {
       color: #94a3b8;
 
@@ -480,6 +624,7 @@
 
       line-height: 1.6;
     }
+
 
     /* ================= FORM ================= */
 
@@ -489,9 +634,11 @@
       margin: 0 auto;
     }
 
+
     .form-group {
       margin-bottom: 18px;
     }
+
 
     .form-group label {
       display: block;
@@ -505,6 +652,7 @@
       font-size: 14px;
     }
 
+
     .form-group input,
     .form-group select {
       width: 100%;
@@ -512,10 +660,11 @@
       padding: 12px 16px;
 
       background:
-      rgba(3,7,18,0.7);
+        rgba(3, 7, 18, 0.7);
 
-      border: 1px solid
-      rgba(255,215,0,0.2);
+      border:
+        1px solid
+        rgba(255, 215, 0, 0.2);
 
       border-radius: 10px;
 
@@ -526,14 +675,34 @@
       outline: none;
     }
 
+
+    .form-group select option {
+      background: #0f172a;
+
+      color: #fff;
+    }
+
+
+    .submit-btn {
+      width: 100%;
+
+      border: none;
+
+      cursor: pointer;
+
+      font-size: 15px;
+    }
+
+
     /* ================= FOOTER ================= */
 
     footer {
       background:
-      rgba(2,6,23,0.95);
+        rgba(2, 6, 23, 0.95);
 
-      border-top: 1px solid
-      rgba(255,215,0,0.2);
+      border-top:
+        1px solid
+        rgba(255, 215, 0, 0.2);
 
       padding: 40px 5% 20px;
 
@@ -542,16 +711,21 @@
       z-index: 2;
     }
 
+
     .footer-grid {
       display: grid;
 
       grid-template-columns:
-      repeat(auto-fit, minmax(200px, 1fr));
+        repeat(
+          auto-fit,
+          minmax(200px, 1fr)
+        );
 
       gap: 25px;
 
       margin-bottom: 30px;
     }
+
 
     .footer-col h3 {
       color: #f59e0b;
@@ -561,6 +735,7 @@
       font-size: 18px;
     }
 
+
     .footer-col p {
       color: #94a3b8;
 
@@ -569,26 +744,35 @@
       margin-bottom: 6px;
     }
 
+
     .footer-bottom {
       text-align: center;
 
       padding-top: 15px;
 
-      border-top: 1px solid
-      rgba(255,255,255,0.1);
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.1);
 
       color: #64748b;
 
       font-size: 13px;
     }
 
+
     /* ================= MOBILE ================= */
 
     @media (max-width: 768px) {
 
+      header {
+        padding: 14px 5%;
+      }
+
+
       .menu-toggle {
         display: block;
       }
+
 
       nav {
         position: absolute;
@@ -600,7 +784,7 @@
         width: 100%;
 
         background:
-        rgba(15,23,42,0.95);
+          rgba(15, 23, 42, 0.95);
 
         backdrop-filter: blur(20px);
 
@@ -608,15 +792,18 @@
 
         padding: 20px 0;
 
-        border-bottom: 1px solid
-        rgba(255,215,0,0.2);
+        border-bottom:
+          1px solid
+          rgba(255, 215, 0, 0.2);
 
         display: none;
       }
 
+
       nav.active {
         display: flex;
       }
+
 
       nav a {
         padding: 10px 0;
@@ -624,7 +811,6 @@
         font-size: 16px;
       }
 
-      /* MOBILE RECTANGLE PHOTO */
 
       .inspired-photo {
         width: 100%;
@@ -636,30 +822,89 @@
         border-radius: 15px;
       }
 
+
       .logo-text {
         font-size: 16px;
       }
 
+
       .logo-img {
         height: 42px;
       }
+
+
+      section {
+        padding-left: 5%;
+
+        padding-right: 5%;
+      }
+
+
+      .hero-container {
+        gap: 25px;
+      }
+
+
+      .responsive-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .about-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+
+    @media (max-width: 400px) {
+
+      .logo-text {
+        font-size: 14px;
+      }
+
+
+      .logo-img {
+        height: 38px;
+      }
+
+
+      .inspired-photo {
+        max-width: 100%;
+
+        height: 180px;
+      }
+
+
+      .inspired-name {
+        min-width: 180px;
+      }
+
     }
 
   </style>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
 </head>
+
 
 <body>
 
+
+  <!-- ================= 3D BACKGROUND ================= -->
+
   <div id="canvas-container"></div>
+
 
   <!-- ================= HEADER ================= -->
 
   <header>
 
-    <a href="#" class="logo-container">
+    <a
+      href="#home"
+      class="logo-container"
+    >
 
       <img
         src="logo.png"
@@ -673,30 +918,65 @@
 
     </a>
 
+
     <div
       class="menu-toggle"
       id="mobile-menu"
     >
+
       <i class="fa-solid fa-bars"></i>
+
     </div>
+
 
     <nav id="nav-list">
 
-      <a href="#home" onclick="closeMenu()">Home</a>
+      <a
+        href="#home"
+        onclick="closeMenu()"
+      >
+        Home
+      </a>
 
-      <a href="#courses" onclick="closeMenu()">Courses</a>
+      <a
+        href="#courses"
+        onclick="closeMenu()"
+      >
+        Courses
+      </a>
 
-      <a href="#about" onclick="closeMenu()">About Us</a>
+      <a
+        href="#about"
+        onclick="closeMenu()"
+      >
+        About Us
+      </a>
 
-      <a href="#gallery" onclick="closeMenu()">Gallery</a>
+      <a
+        href="#gallery"
+        onclick="closeMenu()"
+      >
+        Gallery
+      </a>
 
-      <a href="#admission" onclick="closeMenu()">Admission</a>
+      <a
+        href="#admission"
+        onclick="closeMenu()"
+      >
+        Admission
+      </a>
 
-      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a
+        href="#contact"
+        onclick="closeMenu()"
+      >
+        Contact
+      </a>
 
     </nav>
 
   </header>
+
 
   <!-- ================= HERO ================= -->
 
@@ -706,6 +986,7 @@
   >
 
     <div class="hero-container">
+
 
       <div class="hero-content">
 
@@ -723,15 +1004,20 @@
           Science, and Computer Studies.
         </p>
 
+
         <a
           href="#admission"
           class="btn-3d"
         >
+
           <i class="fa-solid fa-paper-plane"></i>
+
           Join Free Now
+
         </a>
 
       </div>
+
 
       <div
         class="hero-video-card card-3d"
@@ -747,13 +1033,18 @@
             type="video/mp4"
           >
 
+          Your browser does not support
+          the video tag.
+
         </video>
 
       </div>
 
+
     </div>
 
   </section>
+
 
   <!-- ================= COURSES ================= -->
 
@@ -763,7 +1054,11 @@
       Our Free Courses
     </h2>
 
+
     <div class="responsive-grid">
+
+
+      <!-- MATHEMATICS -->
 
       <div class="card-3d course-card">
 
@@ -776,7 +1071,9 @@
 
         </div>
 
-        <h3>Mathematics</h3>
+        <h3>
+          Mathematics
+        </h3>
 
         <p>
           Strong fundamental concepts and
@@ -785,6 +1082,8 @@
 
       </div>
 
+
+      <!-- AI -->
 
       <div class="card-3d course-card">
 
@@ -809,6 +1108,8 @@
       </div>
 
 
+      <!-- GRAPHICS -->
+
       <div class="card-3d course-card">
 
         <div class="media-box">
@@ -831,6 +1132,8 @@
 
       </div>
 
+
+      <!-- ENGLISH -->
 
       <div class="card-3d course-card">
 
@@ -855,6 +1158,8 @@
       </div>
 
 
+      <!-- SCIENCE -->
+
       <div class="card-3d course-card">
 
         <div class="media-box">
@@ -878,6 +1183,8 @@
       </div>
 
 
+      <!-- COMPUTER -->
+
       <div class="card-3d course-card">
 
         <div class="media-box">
@@ -900,9 +1207,11 @@
 
       </div>
 
+
     </div>
 
   </section>
+
 
   <!-- ================= ABOUT ================= -->
 
@@ -912,7 +1221,9 @@
       About AD Foundation
     </h2>
 
+
     <div class="card-3d about-grid">
+
 
       <div class="founder-image-box">
 
@@ -921,19 +1232,21 @@
           alt="Mrs. Rakhi Luthra"
         >
 
+
         <h4
           style="
-          margin-top:10px;
-          color:#f59e0b;
+            margin-top:10px;
+            color:#f59e0b;
           "
         >
           Mrs. Rakhi Luthra
         </h4>
 
+
         <p
           style="
-          color:#94a3b8;
-          font-size:12px;
+            color:#94a3b8;
+            font-size:12px;
           "
         >
           Founder & Owner
@@ -962,6 +1275,7 @@
 
       </div>
 
+
     </div>
 
 
@@ -971,19 +1285,16 @@
       class="card-3d inspired-by-card"
     >
 
-      <!--
-        IMPORTANT:
-        Photo ka naam:
-        inspired-by.jpg
-
-        Photo ko GitHub me
-        index.html ke same folder me rakhein.
-      -->
 
       <div class="inspired-photo-box">
 
+        <!-- IMPORTANT:
+             Photo ka exact naam:
+             inspired-by.png
+        -->
+
         <img
-          src="inspired-by.jpg"
+          src="inspired-by.png"
           alt="Inspired By"
           class="inspired-photo"
         >
@@ -1019,9 +1330,11 @@
 
       </p>
 
+
     </div>
 
   </section>
+
 
   <!-- ================= GALLERY ================= -->
 
@@ -1151,8 +1464,11 @@
 
       </div>
 
+
     </div>
 
+
+    <!-- ================= VIDEOS ================= -->
 
     <h3
       class="subsection-title"
@@ -1273,4 +1589,621 @@
 
         <div class="media-box">
 
-     
+          <video
+            controls
+            poster="video5-thumb.jpg"
+          >
+
+            <source
+              src="video5.mp4"
+              type="video/mp4"
+            >
+
+          </video>
+
+        </div>
+
+        <h4>
+          Science Activity
+        </h4>
+
+      </div>
+
+
+      <div class="card-3d gallery-card">
+
+        <div class="media-box">
+
+          <video
+            controls
+            poster="video6-thumb.jpg"
+          >
+
+            <source
+              src="video6.mp4"
+              type="video/mp4"
+            >
+
+          </video>
+
+        </div>
+
+        <h4>
+          Student Learning
+        </h4>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ADMISSION ================= -->
+
+  <section id="admission">
+
+    <h2 class="section-title">
+      Free Admission
+    </h2>
+
+
+    <div class="card-3d form-container">
+
+
+      <form
+        id="admissionForm"
+      >
+
+
+        <div class="form-group">
+
+          <label for="name">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="course">
+            Select Course
+          </label>
+
+          <select
+            id="course"
+            name="course"
+            required
+          >
+
+            <option value="">
+              Select a course
+            </option>
+
+            <option value="Mathematics">
+              Mathematics
+            </option>
+
+            <option value="Artificial Intelligence">
+              Artificial Intelligence
+            </option>
+
+            <option value="Graphics Design">
+              Graphics Design
+            </option>
+
+            <option value="English">
+              English
+            </option>
+
+            <option value="Science">
+              Science
+            </option>
+
+            <option value="Computer Studies">
+              Computer Studies
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="phone">
+            Phone / WhatsApp Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter phone number"
+            required
+          >
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn-3d submit-btn"
+        >
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+          Submit Registration
+
+        </button>
+
+
+      </form>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <h2 class="section-title">
+      Contact AD Foundation
+    </h2>
+
+
+    <div class="responsive-grid">
+
+
+      <div class="card-3d">
+
+        <h3
+          style="
+            color:#f59e0b;
+            margin-bottom:10px;
+          "
+        >
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          Address
+
+        </h3>
+
+
+        <p
+          style="
+            color:#94a3b8;
+            line-height:1.7;
+          "
+        >
+
+          Sector 92, Block A-17,
+          Ground Floor,
+          Uttar Pradesh
+
+        </p>
+
+      </div>
+
+
+      <div class="card-3d">
+
+        <h3
+          style="
+            color:#f59e0b;
+            margin-bottom:10px;
+          "
+        >
+
+          <i class="fa-solid fa-book"></i>
+
+          Courses Offered
+
+        </h3>
+
+
+        <p
+          style="
+            color:#94a3b8;
+            line-height:1.8;
+          "
+        >
+
+          Maths • AI • Graphics<br>
+
+          English • Science • Computer
+
+        </p>
+
+      </div>
+
+
+      <div class="card-3d">
+
+        <h3
+          style="
+            color:#f59e0b;
+            margin-bottom:10px;
+          "
+        >
+
+          <i class="fa-solid fa-user"></i>
+
+          Contact NGO
+
+        </h3>
+
+
+        <p
+          style="
+            color:#94a3b8;
+            line-height:1.7;
+          "
+        >
+
+          AD Foundation NGO<br>
+
+          Founder: Mrs. Rakhi Luthra
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-col">
+
+        <h3>
+          AD Foundation
+        </h3>
+
+        <p>
+          Free Education For All
+        </p>
+
+        <p>
+          Providing free quality education
+          and skill development.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Courses
+        </h3>
+
+        <p>
+          Mathematics
+        </p>
+
+        <p>
+          Artificial Intelligence
+        </p>
+
+        <p>
+          Graphics Design
+        </p>
+
+        <p>
+          English
+        </p>
+
+        <p>
+          Science
+        </p>
+
+        <p>
+          Computer Studies
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          Sector 92, Block A-17
+        </p>
+
+        <p>
+          Ground Floor,
+          Uttar Pradesh
+        </p>
+
+        <p>
+          Founder:
+          Mrs. Rakhi Luthra
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 AD Foundation NGO.
+      All Rights Reserved.
+
+    </div>
+
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* ================= MOBILE MENU ================= */
+
+    const mobileMenu =
+      document.getElementById("mobile-menu");
+
+    const navList =
+      document.getElementById("nav-list");
+
+
+    mobileMenu.addEventListener(
+      "click",
+      function () {
+
+        navList.classList.toggle("active");
+
+      }
+    );
+
+
+    function closeMenu() {
+
+      navList.classList.remove("active");
+
+    }
+
+
+    /* ================= ADMISSION FORM ================= */
+
+    const admissionForm =
+      document.getElementById("admissionForm");
+
+
+    admissionForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        const name =
+          document.getElementById("name").value;
+
+        const course =
+          document.getElementById("course").value;
+
+        const phone =
+          document.getElementById("phone").value;
+
+
+        if (!name || !course || !phone) {
+
+          alert(
+            "Please fill all the details."
+          );
+
+          return;
+
+        }
+
+
+        alert(
+          "Thank you " +
+          name +
+          "! Your registration for " +
+          course +
+          " has been submitted."
+        );
+
+
+        admissionForm.reset();
+
+      }
+    );
+
+
+    /* ================= THREE.JS BACKGROUND ================= */
+
+    const container =
+      document.getElementById(
+        "canvas-container"
+      );
+
+
+    if (typeof THREE !== "undefined") {
+
+      const scene =
+        new THREE.Scene();
+
+
+      const camera =
+        new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth /
+          window.innerHeight,
+          0.1,
+          1000
+        );
+
+
+      const renderer =
+        new THREE.WebGLRenderer({
+          alpha: true,
+          antialias: true
+        });
+
+
+      renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+      );
+
+
+      renderer.setPixelRatio(
+        Math.min(
+          window.devicePixelRatio,
+          2
+        )
+      );
+
+
+      container.appendChild(
+        renderer.domElement
+      );
+
+
+      camera.position.z = 5;
+
+
+      const geometry =
+        new THREE.BufferGeometry();
+
+
+      const particles = 900;
+
+
+      const positions =
+        new Float32Array(
+          particles * 3
+        );
+
+
+      for (
+        let i = 0;
+        i < particles * 3;
+        i++
+      ) {
+
+        positions[i] =
+          (Math.random() - 0.5) * 15;
+
+      }
+
+
+      geometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(
+          positions,
+          3
+        )
+      );
+
+
+      const material =
+        new THREE.PointsMaterial({
+
+          color: 0x38bdf8,
+
+          size: 0.025,
+
+          transparent: true,
+
+          opacity: 0.7
+
+        });
+
+
+      const points =
+        new THREE.Points(
+          geometry,
+          material
+        );
+
+
+      scene.add(points);
+
+
+      function animate() {
+
+        requestAnimationFrame(
+          animate
+        );
+
+
+        points.rotation.y +=
+          0.0005;
+
+        points.rotation.x +=
+          0.0002;
+
+
+        renderer.render(
+          scene,
+          camera
+        );
+
+      }
+
+
+      animate();
+
+
+      window.addEventListener(
+        "resize",
+        function () {
+
+          camera.aspect =
+            window.innerWidth /
+            window.innerHeight;
+
+          camera.updateProjectionMatrix();
+
+
+          renderer.setSize(
+            window.innerWidth,
+            window.innerHeight
+          );
+
+        }
+      );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
